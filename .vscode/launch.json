@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "BooksWorld API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "dotnet: watch BooksWorld.API",
+            "program": "${workspaceFolder}/BooksWorld.API/bin/Debug/net8.0/BooksWorld.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "BooksWorld MVC",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "dotnet: watch BooksWorld.MVC",
+            "program": "${workspaceFolder}/BooksWorld.MVC/bin/Debug/net8.0/BooksWorld.MVC.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Client/Server",
+            "configurations": ["BooksWorld MVC","BooksWorld API"]
+        }
+    ]
+}

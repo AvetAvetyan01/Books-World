@@ -1,0 +1,14 @@
+GET https://{{hostname}}:{{httpsPort}}/Book/books-collection?Size=15&authorId=4
+Content-Type: application/json  
+
+# {
+#   "duration": "1111-01-01T03:27:39",
+#   "reader": "Hekler and Kock",
+#   "url": "something.Url",
+#   "introductionUrl": "something.Url",
+#   "bookId": 184,
+#   "language": "German",
+#   "year": 1945,
+#   "price": 1900,
+#   "publisher": "WW2"
+# } 

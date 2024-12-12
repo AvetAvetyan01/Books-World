@@ -1,0 +1,1 @@
+﻿export const fetchData = async (URL) => fetch(URL).then(res => res.json())

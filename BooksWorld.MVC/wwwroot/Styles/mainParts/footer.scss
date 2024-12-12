@@ -1,0 +1,107 @@
+﻿@use "../tools/colors.scss" as *;
+@use "../tools/fonts.scss" as *;
+
+footer {
+    margin-top: auto;
+    background: $darkGray;
+
+    .footer-container {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 30% 25% 15%;
+        justify-content: space-around;
+        align-items:baseline;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+}
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    column-gap: 10%;
+    row-gap: 10px;
+
+    a {
+        font-size: 20px;
+        font-weight: 400;
+        color: $white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.notification-access {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+
+    p:first-child {
+        font-size: 24px;
+        font-weight: 800;
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    div {
+        display: flex;
+
+        input { 
+            width: 85%;
+            padding: 10px;
+            border-right: none;
+            border: 2px solid $white;
+            border-right: none;
+            outline: none;
+        }
+
+        button {
+            cursor: pointer;
+            width: 15%;
+            border: none;
+            background: $darkBlue;
+            color: $white;
+            border: 2px solid $white;
+            border-left: none;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+    p:last-child {
+        font-weight: 300;
+        font-size: 16px;
+        color: $transparentWhite;
+    }
+}
+.sm-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+
+    p {
+        font-weight: 800;
+        font-size: 24px;
+        color: $white;
+        white-space: nowrap;
+        text-transform: uppercase;
+    }
+
+    .sm-icons {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+        }
+
+        a {
+            color: $white;
+        }
+
+        i {
+            font-size: 35px;
+        }
+    }
+}

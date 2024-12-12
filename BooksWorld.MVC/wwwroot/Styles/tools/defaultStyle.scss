@@ -1,0 +1,32 @@
+﻿@use "fonts.scss" as *;
+@use "colors.scss" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol, li {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+}
+
+input {
+    outline: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    font-family: $standartFont;
+    background: $bodyColor;
+}
+
+a {
+    text-decoration: none;
+}

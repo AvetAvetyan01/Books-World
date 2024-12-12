@@ -1,0 +1,47 @@
+﻿@use "../tools/colors.scss" as *;
+@use "../tools/fonts.scss" as *;
+
+.collections {
+    display: grid;
+    row-gap: 20px;      
+}
+.collection {
+    display: grid;  
+    row-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+
+    .title {
+        width: fit-content;
+        color: $black;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: $poshFont;
+
+        p {
+        }
+        i {
+        }
+    }
+}
+.scrollable-list {
+    position: relative;
+    overflow-x: scroll;
+    padding-bottom: 20px;   
+
+    &::-webkit-scrollbar {
+        background: $transparentGray;
+        height: 3px;
+        transition: 10s;
+        opacity: 0.5;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $lightGray;
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+}

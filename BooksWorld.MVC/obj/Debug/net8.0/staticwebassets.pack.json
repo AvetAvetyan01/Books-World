@@ -1,0 +1,361 @@
+{
+  "Files": [
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Data/JSON/PagesData/NewestBooks.json",
+      "PackagePath": "staticwebassets/Data/JSON/PagesData/NewestBooks.json"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Data/JSON/PagesData/PopularBooks.json",
+      "PackagePath": "staticwebassets/Data/JSON/PagesData/PopularBooks.json"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Data/JSON/PagesData/RatingBooks.json",
+      "PackagePath": "staticwebassets/Data/JSON/PagesData/RatingBooks.json"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/adsImages/Banners/Banner_1.png",
+      "PackagePath": "staticwebassets/Images/adsImages/Banners/Banner_1.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/adsImages/Banners/Banner_2.png",
+      "PackagePath": "staticwebassets/Images/adsImages/Banners/Banner_2.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/books/book-1.jpg",
+      "PackagePath": "staticwebassets/Images/books/book-1.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/flagImages/american-england-flag.jpg",
+      "PackagePath": "staticwebassets/Images/flagImages/american-england-flag.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/flagImages/armenian-flag.png",
+      "PackagePath": "staticwebassets/Images/flagImages/armenian-flag.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/flagImages/russain-flag.jpg",
+      "PackagePath": "staticwebassets/Images/flagImages/russain-flag.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/genreImages/Business_Image.png",
+      "PackagePath": "staticwebassets/Images/genreImages/Business_Image.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/genreImages/Fairy_Image.jpeg",
+      "PackagePath": "staticwebassets/Images/genreImages/Fairy_Image.jpeg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/genreImages/Historical_Image.png",
+      "PackagePath": "staticwebassets/Images/genreImages/Historical_Image.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/genreImages/Literature_Image.png",
+      "PackagePath": "staticwebassets/Images/genreImages/Literature_Image.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/genreImages/Programming_Image.jpg",
+      "PackagePath": "staticwebassets/Images/genreImages/Programming_Image.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/genreImages/Since_Image.png",
+      "PackagePath": "staticwebassets/Images/genreImages/Since_Image.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/headerAdsImages/anabolics.webp",
+      "PackagePath": "staticwebassets/Images/headerAdsImages/anabolics.webp"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/headerAdsImages/bookImage.webp",
+      "PackagePath": "staticwebassets/Images/headerAdsImages/bookImage.webp"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/headerAdsImages/doctor strange.jpg",
+      "PackagePath": "staticwebassets/Images/headerAdsImages/doctor strange.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/headerAdsImages/duna.jpg",
+      "PackagePath": "staticwebassets/Images/headerAdsImages/duna.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/headerAdsImages/interstellar.webp",
+      "PackagePath": "staticwebassets/Images/headerAdsImages/interstellar.webp"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/headerAdsImages/last samurai.jpg",
+      "PackagePath": "staticwebassets/Images/headerAdsImages/last samurai.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/logo.png",
+      "PackagePath": "staticwebassets/Images/logo.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/logo_2.png",
+      "PackagePath": "staticwebassets/Images/logo_2.png"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/sliderImages/Garni.jpg",
+      "PackagePath": "staticwebassets/Images/sliderImages/Garni.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/sliderImages/historycal.jpg",
+      "PackagePath": "staticwebassets/Images/sliderImages/historycal.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/sliderImages/japan.jpeg",
+      "PackagePath": "staticwebassets/Images/sliderImages/japan.jpeg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Images/sliderImages/library.jpg",
+      "PackagePath": "staticwebassets/Images/sliderImages/library.jpg"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Constructors/Author.js",
+      "PackagePath": "staticwebassets/Scripts/Constructors/Author.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Constructors/BookCard.js",
+      "PackagePath": "staticwebassets/Scripts/Constructors/BookCard.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Constructors/FormGenre.js",
+      "PackagePath": "staticwebassets/Scripts/Constructors/FormGenre.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Constructors/HeaderGenre.js",
+      "PackagePath": "staticwebassets/Scripts/Constructors/HeaderGenre.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Constructors/Pager.js",
+      "PackagePath": "staticwebassets/Scripts/Constructors/Pager.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Constructors/Review.js",
+      "PackagePath": "staticwebassets/Scripts/Constructors/Review.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/DataProvider.js",
+      "PackagePath": "staticwebassets/Scripts/DataProvider.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Accordion/Accordion.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Accordion/Accordion.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/DropdownMenu/DropdownMenu.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/DropdownMenu/DropdownMenu.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Form/CheckboxMenu.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Form/CheckboxMenu.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Form/RangeMenu.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Form/RangeMenu.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Form/Submit.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Form/Submit.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Form/ToggleSwitch.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Form/ToggleSwitch.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Form/ValueInput.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Form/ValueInput.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Form/VerticalMenu.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Form/VerticalMenu.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Header/AccountMenu.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Header/AccountMenu.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Header/AdsSlider.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Header/AdsSlider.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Header/BottomNavigation.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Header/BottomNavigation.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Header/LanguageMenu.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Header/LanguageMenu.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Pager/PagerMenu.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Pager/PagerMenu.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Components/Slider/Slider.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Components/Slider/Slider.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Pages/Book/Formats.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Pages/Book/Formats.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/Events/Pages/Books/SetEvents.js",
+      "PackagePath": "staticwebassets/Scripts/Events/Pages/Books/SetEvents.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/MainScript.js",
+      "PackagePath": "staticwebassets/Scripts/MainScript.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/PageScripts/AuthorPage.js",
+      "PackagePath": "staticwebassets/Scripts/PageScripts/AuthorPage.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/PageScripts/BookPage.js",
+      "PackagePath": "staticwebassets/Scripts/PageScripts/BookPage.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/PageScripts/BooksPage.js",
+      "PackagePath": "staticwebassets/Scripts/PageScripts/BooksPage.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/PageScripts/GenresPage.js",
+      "PackagePath": "staticwebassets/Scripts/PageScripts/GenresPage.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Scripts/PageScripts/HomePage.js",
+      "PackagePath": "staticwebassets/Scripts/PageScripts/HomePage.js"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/MainStyle.css",
+      "PackagePath": "staticwebassets/Styles/MainStyle.css"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/MainStyle.css.map",
+      "PackagePath": "staticwebassets/Styles/MainStyle.css.map"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/MainStyle.scss",
+      "PackagePath": "staticwebassets/Styles/MainStyle.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/ADS.scss",
+      "PackagePath": "staticwebassets/Styles/components/ADS.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/accordion.scss",
+      "PackagePath": "staticwebassets/Styles/components/accordion.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/cards/authorCard.scss",
+      "PackagePath": "staticwebassets/Styles/components/cards/authorCard.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/cards/bookCard.scss",
+      "PackagePath": "staticwebassets/Styles/components/cards/bookCard.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/cards/genreCard.scss",
+      "PackagePath": "staticwebassets/Styles/components/cards/genreCard.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/checkbox.scss",
+      "PackagePath": "staticwebassets/Styles/components/checkbox.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/collection.scss",
+      "PackagePath": "staticwebassets/Styles/components/collection.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/dropdownMenues/languagesType.scss",
+      "PackagePath": "staticwebassets/Styles/components/dropdownMenues/languagesType.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/dropdownMenues/underlineType.scss",
+      "PackagePath": "staticwebassets/Styles/components/dropdownMenues/underlineType.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/form/filtrationForm/rangeFields.scss",
+      "PackagePath": "staticwebassets/Styles/components/form/filtrationForm/rangeFields.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/form/filtrationForm/toggleSwitch.scss",
+      "PackagePath": "staticwebassets/Styles/components/form/filtrationForm/toggleSwitch.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/form/loginRegForm/logRegForm.scss",
+      "PackagePath": "staticwebassets/Styles/components/form/loginRegForm/logRegForm.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/pager.scss",
+      "PackagePath": "staticwebassets/Styles/components/pager.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/components/slider.scss",
+      "PackagePath": "staticwebassets/Styles/components/slider.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/mainParts/footer.scss",
+      "PackagePath": "staticwebassets/Styles/mainParts/footer.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/mainParts/header.scss",
+      "PackagePath": "staticwebassets/Styles/mainParts/header.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/mainParts/main.scss",
+      "PackagePath": "staticwebassets/Styles/mainParts/main.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/mixins/buttonMixins.scss",
+      "PackagePath": "staticwebassets/Styles/mixins/buttonMixins.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/mixins/textMixins.scss",
+      "PackagePath": "staticwebassets/Styles/mixins/textMixins.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/pages/authorPage.scss",
+      "PackagePath": "staticwebassets/Styles/pages/authorPage.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/pages/bookPage.scss",
+      "PackagePath": "staticwebassets/Styles/pages/bookPage.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/pages/booksPage.scss",
+      "PackagePath": "staticwebassets/Styles/pages/booksPage.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/pages/homePage.scss",
+      "PackagePath": "staticwebassets/Styles/pages/homePage.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/tools/colors.scss",
+      "PackagePath": "staticwebassets/Styles/tools/colors.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/tools/defaultStyle.scss",
+      "PackagePath": "staticwebassets/Styles/tools/defaultStyle.scss"
+    },
+    {
+      "Id": "/home/avet/Documents/C#/BooksWorld/BooksWorld.MVC/wwwroot/Styles/tools/fonts.scss",
+      "PackagePath": "staticwebassets/Styles/tools/fonts.scss"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BooksWorld.MVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BooksWorld.MVC.props",
+      "PackagePath": "build\\BooksWorld.MVC.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BooksWorld.MVC.props",
+      "PackagePath": "buildMultiTargeting\\BooksWorld.MVC.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BooksWorld.MVC.props",
+      "PackagePath": "buildTransitive\\BooksWorld.MVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

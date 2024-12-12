@@ -1,0 +1,12 @@
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/bin/Debug/net8.0/BooksWorld.Domain.deps.json
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/bin/Debug/net8.0/BooksWorld.Domain.dll
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/bin/Debug/net8.0/BooksWorld.Domain.pdb
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/BooksWorld.Domain.csproj.AssemblyReference.cache
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/BooksWorld.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/BooksWorld.Domain.AssemblyInfoInputs.cache
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/BooksWorld.Domain.AssemblyInfo.cs
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/BooksWorld.Domain.csproj.CoreCompileInputs.cache
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/BooksWorld.Domain.dll
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/refint/BooksWorld.Domain.dll
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/BooksWorld.Domain.pdb
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Domain/obj/Debug/net8.0/ref/BooksWorld.Domain.dll

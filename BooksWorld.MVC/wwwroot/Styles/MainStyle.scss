@@ -1,0 +1,16 @@
+@use "pages/authorPage.scss"; 
+@use "pages/bookPage.scss";
+@use "pages/booksPage.scss";
+@use "pages/homePage.scss";
+
+@use "tools/colors.scss";
+@use "tools/fonts.scss";
+@use "tools/defaultStyle.scss";
+
+@use "mainParts/header.scss";
+@use "mainParts/main.scss";
+@use "mainParts/footer.scss" ;
+
+@use "components/ADS.scss";
+@use "components/accordion.scss";
+@use "components/form/loginRegForm/logRegForm.scss";

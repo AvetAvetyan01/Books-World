@@ -1,0 +1,95 @@
+﻿@use "../tools/colors.scss" as *;
+@use "../tools/fonts.scss" as *;
+
+.slider {
+    width: 90%;
+    margin: 0 auto;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px $lightGray; 
+
+    .active-slide {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .inactive-slide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .slides {
+        display: flex;
+
+        li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+
+            .image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .content {
+                display: grid;
+                row-gap: 10px;
+                position: absolute;
+                bottom: 0;
+                width: 45%;
+                border-top-right-radius: 20px;
+                padding: 30px 20px 70px 20px;
+                color: $white;
+                background: $transparentBlack;
+
+                .title {
+                    font-size: 20px;
+                    font-family: $poshFont;
+                    font-weight: 800;
+                }
+                .description {
+                    font-size: 16px;
+                    font-weight: 400;
+                    height: auto;
+                    height: 60px;
+
+                    &:first-letter {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+    .dots {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        padding: 0 15px;
+
+        .active-slide-dot {
+            margin: 0;
+            width: 60px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .inactive-slide-dot {
+            cursor: pointer;
+            width: 15px;
+            border-radius: 50%;
+        }
+        li {
+            height: 15px;
+            background: $white;
+            margin-right: 10px;
+            transition: 1s;
+        }
+        &:last-child {
+            margin: 0;
+        }
+    }
+}

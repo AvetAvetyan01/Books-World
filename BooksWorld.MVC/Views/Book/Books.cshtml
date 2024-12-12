@@ -1,0 +1,156 @@
+﻿@{ViewData["Title"] = "Books";}
+@model GetPagedBooksRequest;
+
+<section class="filter-sorting-books">
+    <form asp-controller="Book" asp-action="Books" method="get" class="books-filtration-form" id="booksFiltrationForm">
+        <div class="expandable-menu">
+            <p class="title" id="genreTitle"></p>
+            <ul class="menu active" id="genresSmallList"></ul>
+            <ul class="menu extended" id="genresLargeList"></ul>
+
+            <div class="menu-expander-button inactive-button" id="genresListButton">
+                <p>Show all</p> <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+
+        <ul class="switches-menu">
+            <li>
+                <p class="text">Discounted books</p>
+                <label class="switch">
+                    <input name="Discount" type="checkbox" id="Discount"/>
+                    <span class="circle"></span>
+                </label>
+            </li>
+
+            <li>
+                <p class="text">High rating books</p>
+                <label class="switch">
+                    <input name="HighRating" type="checkbox" id="HighRating"/>
+                    <span class="circle"></span>
+                </label>
+            </li>
+        </ul>
+
+        <div class="years-range">
+            <p class="title">Year</p>
+
+            <ul class="range-fields">
+                <input placeholder="Min" id="MinYear" type="number"/>
+                <p class="line">-</p>
+                <input placeholder="Max" id="MaxYear" type="number" />
+            </ul>
+        </div>
+
+
+        <div class="pages-range">
+            <p class="title">Pages Count</p>
+
+            <ul class="range-fields">
+                <input placeholder="Min" id="MinPagesCount" type="number" />
+                <p class="line">-</p>
+                <input placeholder="Max" id="MaxPagesCount" type="number" />
+            </ul>
+        </div>
+
+        <div class="price-range">
+            <p class="title">Price</p>
+
+            <ul class="range-fields">
+                <input placeholder="Min" id="MinPrice" type="number" />
+                <p class="line">-</p>
+                <input placeholder="Max" id="MaxPrice" type="number" />
+            </ul>
+        </div>
+
+        <div class="checkbox-menu">
+            <p class="title">Formats</p>
+            <ul class="menu" id="formatsList">
+                <li>
+                    <label class="option">
+                        <input type="checkbox" class="checkbox" value="Paper" />
+                        Paper
+                    </label>
+                </li>
+
+                <li>
+                    <label class="option">
+                        <input type="checkbox" class="checkbox" value="Electronic" />
+                        Electronic
+                    </label>
+                </li>
+
+                <li>
+                    <label class="option">
+                        <input type="checkbox" class="checkbox" value="Audio" />
+                        Audio
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checkbox-menu">
+            <p class="title">Languages</p>
+            <ul class="menu" id="languagesList">
+                <li>
+                    <label class="option">
+                        <input type="checkbox" class="checkbox" value="Armenian" />
+                        Armenian
+                    </label>
+                    <img class="flag-image" src="~/Images/flagImages/armenian-flag.png" />
+                </li>
+
+                <li>
+                    <label class="option">
+                        <input type="checkbox" class="checkbox" value="English" />
+                        English
+                    </label>
+                    <img class="flag-image" src="~/Images/flagImages/american-england-flag.jpg" />
+                </li>
+
+                <li>
+                    <label class="option">
+                        <input type="checkbox" class="checkbox" value="Russian" />
+                        Russian
+                    </label>
+                    <img class="flag-image" src="~/Images/flagImages/russain-flag.jpg" />
+                </li>
+            </ul>
+        </div>
+
+        <input name="Page" id="Page" type="hidden" class="inactive-value"/>
+        <input name="SortingType" id="SortingType" type="hidden" class="inactive-value" value="Rating"/>
+    </form>
+
+    <article class="content">
+        <a href="">
+            <img src="~/Images/adsImages/Banners/Banner_1.png" class="banner in-content"/>
+        </a>    
+    
+        <div class="underline-dropdown-menu">
+            <button class="selected-item" id="sortingMenuButton">
+                <p class="name" id="sortingTitle"></p>
+                <i class="fa-solid fa-chevron-down icon"></i>
+            </button>
+                    
+            <ul class="items-list" id="sortingTypes">
+                <li class="item" data-index="0" value="Price">Price</li>
+                <li class="item" data-index="1" value="Rating">Rating</li>
+                <li class="item" data-index="2" value="Popular">Popular</li>
+            </ul>
+        </div>
+
+        <ul class="books-vertical-list" id="booksList"></ul>
+        <ul class="pager" id="booksPager"></ul>
+    </article>
+</section>
+            
+<script src="~/Scripts/Events/Components/Form/ToggleSwitch.js"           type="module"></script>
+<script src="~/Scripts/Events/Components/Form/RangeMenu.js"              type="module"></script>
+<script src="~/Scripts/Events/Components/Form/CheckboxMenu.js"           type="module"></script>
+<script src="~/Scripts/Events/Components/Form/Submit.js"                 type="module"></script>
+<script src="~/Scripts/Events/Components/Form/VerticalMenu.js"           type="module"></script>
+<script src="~/Scripts/Events/Components/Pager/PagerMenu.js"             type="module"></script>
+<script src="~/Scripts/Events/Components/DropdownMenu/DropdownMenu.js"   type="module"></script>
+<script src="~/Scripts/Events/Pages/Books/SetEvents.js"                  type="module"></script>
+<script src="~/Scripts/PageScripts/BooksPage.js"                         type="module"></script> 
+ 

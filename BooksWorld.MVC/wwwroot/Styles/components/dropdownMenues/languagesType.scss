@@ -1,0 +1,80 @@
+﻿@use "../../tools/colors.scss" as *;
+@use "../../tools/fonts.scss" as *;
+
+.languages-dropdown-menu {
+    position: relative;
+    
+    .items-list {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        border: 1px solid $lightGray;
+        border-radius: 10px;
+        overflow: hidden;
+        background: $bodyColor;
+        z-index: 4;
+    }
+    .active-menu {
+        display: grid;
+    }
+
+    .item {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        border-bottom: 1px solid $lightGray;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:last-child {
+            border: none;
+        }
+
+        & > * {
+            pointer-events: none;
+        }
+
+        .name {
+            font-size: 20px;
+        }
+
+        .flag-image {
+            width: 30px;
+            height: 20px;
+            border-radius: 2px;
+            border: 1px solid $darkGray;
+        }
+
+        &:hover {
+            background: $lightBlue;
+            color: $white;
+            
+            .flag-image{
+                border-color: $transparentWhite;
+            }
+        }
+    }
+    .selected-item {
+        width: 100%;
+        column-gap: 10px;
+        border: none;
+        border-radius: 7px;
+        appearance: none;
+        background: $darkBlue;
+        font-family: $standartFont;
+        color: $white;
+        cursor: pointer;
+
+        .flag-image{
+            border-color: $transparentWhite;
+        }
+        &:hover{
+            background: $darkBlue;
+        }
+    }
+    .hidden-item {
+        display: none;
+    }
+}

@@ -1,0 +1,262 @@
+﻿@{ ViewData["Title"] = Model.Title;}
+@{ int index = 0; }
+@model Book
+
+<section class="book-section">
+    <article class="book-img-pre">
+        <img class="image" src="@Model.ImageUrl"/>
+        <a class="preview">Preview</a>
+    </article>
+
+    <article class="book-info">
+        <h1 class="book-title">@Model.Title</h1>
+
+        <div class="book-rating">
+            <i class="fa-solid fa-star star"></i>
+            <p class="grades-count">@Model.Rating.7</p>
+        </div>
+
+        <div class="book-author-info" title="Author">
+            <img class="image" src="@Model.Author.ImageUrl"/>
+            <h2 class="fullname">@Model.Author.FullName</h2>
+        </div>
+
+        <ul class="book-actions">
+            @* checking if not in likeds or cart *@
+            <li class="add-likeds-button">
+                <button>
+                    <i class="fa-regular fa-heart"></i>
+                    <p>Add to Likeds</p>
+                </button>
+            </li>
+
+            <li class="add-cart-button">
+                <button>
+                    <i class="fa-solid fa-cart-shopping fa-flip-horizontal"></i>
+                    <p>Add to Cart</p>
+                </button>
+            </li>
+        </ul>
+
+        <div class="book-formats">
+            <div class="title">
+                <h3 class="name">Formats</h3>
+                @if (Model.Discount != null)
+                {
+                    <div class="discount">
+                        <i class="fa-solid fa-tags fa-flip-horizontal"></i>
+                        <p>@(Model.Discount.Percent)%</p>
+                    </div>
+                }
+            </div>
+
+            <ul class="format-list" id="formatsList">
+                @if (Model.Paperbooks != null && Model.Paperbooks.Count > 0)
+                {
+                    @foreach (var paperbook in Model.Paperbooks)
+                    {
+                        <li class="format">
+
+                            <button
+                                data-index="@(index++)"
+                                data-id="@paperbook.Id"
+                                data-language="@paperbook.Language"
+                                data-year="@paperbook.Year"
+                                data-type="Paperbook"
+                                data-publisher="@paperbook.Publisher"
+                                data-pages_count="@paperbook.PagesCount"
+                                >
+                                <p class="publisher">@paperbook.Publisher</p>
+
+                                <div class="minimal-info">
+                                    <p class="format-value">Paperbook</p>
+                                    <p class="language">@paperbook.Language</p>
+                                    <p class="year">@paperbook.Year</p>
+                                </div>
+
+                                <div class="price">
+                                    @if (Model.Discount != null)
+                                    {
+                                        <p class="previous-price">@paperbook.Price  AMD</p>
+                                        <p class="current-price">
+                                            @(paperbook.Price - (paperbook.Price * Model.Discount.Percent) / 100) AMD
+                                        </p>
+                                    }
+                                    else
+                                        { <p class="current-price">@paperbook.Price AMD</p> }
+                                </div>
+                            </button>
+                        </li>
+                    }
+                }
+                @if(Model.eBooks != null && Model.eBooks.Count > 0)
+                {
+                    @foreach (var ebook in Model.eBooks)
+                    {
+                        <li class="format">
+                            <button 
+                                data-index="@(index++)"
+                                data-id="@ebook.Id"
+                                data-language="@ebook.Language"
+                                data-year="@ebook.Year"
+                                data-type="eBook"
+                                data-publisher="@ebook.Publisher"
+                                >
+                                <p class="publisher">@ebook.Publisher</p>
+
+                                <div class="minimal-info">
+                                    <p class="format-value">eBook</p>
+                                    <p class="language">@ebook.Language</p>
+                                    <p class="year">@ebook.Year</p>
+                                </div>
+
+                                <div class="price">
+                                    @if (Model.Discount != null)
+                                    {
+                                        <p class="previous-price">@ebook.Price AMD</p>
+                                        <p class="current-price">
+                                            @(ebook.Price - (ebook.Price * Model.Discount.Percent) / 100) AMD
+                                        </p>
+                                    }
+                                    else 
+                                        { <p class="current-price">@ebook.Price AMD</p> }
+                                </div>
+                            </button>
+                        </li>
+                    }
+                }
+                @if (Model.Audiobooks != null && Model.Audiobooks.Count > 0)
+                {
+                    @foreach (var audiobook in Model.Audiobooks)
+                    {
+                        <li class="format">
+                            <button 
+                                data-index="@(index++)"
+                                data-id="@audiobook.Id"
+                                data-language="@audiobook.Language"
+                                data-year="@audiobook.Year"
+                                data-type="Audiobook"
+                                data-publisher="@audiobook.Publisher"
+                                data-publisher="@audiobook.Duration"
+                                >
+                                <p class="publisher">@audiobook.Publisher</p>
+
+                                <div class="minimal-info">
+                                    <p class="format-value">Audiobook</p>
+                                    <p class="language">@audiobook.Language</p>
+                                    <p class="year">@audiobook.Year</p>
+                                </div>
+
+                                <div class="price">
+                                    @if (Model.Discount != null)
+                                    {
+                                        <p class="previous-price">@audiobook.Price AMD</p>
+                                        <p class="current-price">
+                                            @(audiobook.Price - (audiobook.Price * Model.Discount.Percent) / 100) AMD
+                                        </p>
+                                    }
+                                    else { <p class="current-price">@audiobook.Price AMD</p> }
+                                </div>
+                            </button>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    </article>
+</section>
+
+<section class="additional-info-section">
+    <article class="detals">
+        <p class="title">Detals</p>
+        <table id="infoTable"></table>
+    </article>
+
+    <article class="description">
+        <p class="title">Description</p>
+        <p class="text">@Model.Description</p>
+    </article>
+</section>
+
+<section class="reviews-section">
+    <article class="title-nav">
+        <div class="title">
+            <p class="name">Reviews</p>
+            <p class="reviews-count">(@(Model.Reviews?.Count))</p>
+        </div>
+
+        <ul class="nav">
+            <li><button>Watch All Reviews</button></li>
+            <li><button>
+                <i class="fa-solid fa-plus"></i>
+                <p>Leave Review</p>
+            </button></li>
+        </ul>
+    </article>
+
+    <article class="leave-review">
+        <div class="avatar-grade">
+            <img class="avatar-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_6KJSsIUDlVBsKnwmtgWdl2RpwRtPSc34Q&usqp=CAU"/>
+
+            <ul class="stars">
+                @for (int i = 0; i < 5; i++)
+                    { <li class="star"><i class="fa-regular fa-star"></i></li> }
+            </ul>
+        </div>
+
+        <textarea class="comment-input"></textarea>
+
+        <button class="leave-review-button">Leave</button>
+    </article>
+
+    @if (Model.Reviews != null && Model.Reviews.Count > 0)
+    {
+        <ul class="review-list">
+            @foreach(var review in Model.Reviews)
+            {
+                <li class="review">
+                    <div class="user-image">
+                        <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_6KJSsIUDlVBsKnwmtgWdl2RpwRtPSc34Q&usqp=CAU" />
+                    </div>
+
+                    <div class="content">
+                        <div class="info">
+                            <div class="username-date">
+                                <p class="username">Robert</p>
+                                <p class="date">@review.Date.Day.@review.Date.Month.@review.Date.Year</p>
+                            </div>
+
+                            <div class="grade">
+                                <ul class="stars">
+                                    @for (int i = 0; i < review.Grade; i++)
+                                        { <li class="star"><i class="fa-solid fa-star"></i></li> }
+                                    @for (int i = 0; i < 5 - review.Grade; i++)
+                                        { <li class="star"><i class="fa-regular fa-star"></i></li> }
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="comment">@review.Comment</p>
+                    </div>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <article class="title">
+            <p class="name">Reviews (none)</p>
+        </article>
+    }
+</section>
+
+<section class="recomended-books collection">
+    <div class="title">
+        <p>Recomended Books</p>
+    </div>
+
+    <ul class="books-horizontal-list scrollable-list" id="recomendedBooks"></ul>
+</section> 
+
+<script src="~/Scripts/Events/Pages/Book/Formats.js"  type="module"></script>
+<script src="~/Scripts/PageScripts/BookPage.js"  type="module"></script>

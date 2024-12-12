@@ -1,0 +1,148 @@
+﻿@{ ViewData["Title"] = "Home"; }
+
+<section class="presentation-section">
+    <article class="slider">
+        <ul class="slides" id="slides">
+            <li class="active-slide">
+                <a href="">
+                    <img class="image" src="~/Images/sliderImages/japan.jpeg" asp-append-version="true" />
+                    <div class="content">
+                        <p class="title">Japan Art</p>
+                        <p class="description">Text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley printing and typesetting industry. Lorem Ipsum has been the industrys</p>
+                    </div>
+                </a>
+            </li>
+
+            <li class="inactive-slide">
+                <a href="">
+                    <img class="image" src="~/Images/sliderImages/historycal.jpg"  />
+                    <div class="content">
+                        <p class="title">Discover History</p>
+                        <p class="description">Text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+                    </div>
+                </a>
+            </li>
+
+            <li class="inactive-slide">
+                <a href="">
+                    <img class="image" src="~/Images/sliderImages/Garni.jpg" asp-append-version="true" />
+                    <div class="content">
+                        <p class="title">The millennial history of Armenia</p>
+                        <p class="description">Text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley standard dummy text ever since the 1487s, when an unknown printer</p>
+                    </div>
+                </a>
+            </li>
+
+            <li class="inactive-slide">
+                <a href="">
+                    <img class="image" src="~/Images/sliderImages/library.jpg" asp-append-version="true" />
+                    <div class="content">
+                        <p class="title">Choose your library</p>
+                        <p class="description">Text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley typesetting industry lorem Ipsum has been</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="dots" id="sliderDots">
+            <li class="active-slide-dot"   data-slideid="0"></li>
+            <li class="inactive-slide-dot" data-slideid="1"></li>
+            <li class="inactive-slide-dot" data-slideid="2"></li>
+            <li class="inactive-slide-dot" data-slideid="3"></li>
+        </ul>
+    </article>
+</section>
+
+<section class="content-section">
+    <ul class="collections">
+        <li class="collection">
+            <a class="title" asp-controller="" asp-action="">
+                <p>Newest</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <ul class="books-horizontal-list scrollable-list" id="newestBooks"></ul>
+        </li>
+
+        <li class="collection">
+            <a class="title" asp-controller="" asp-action="">
+                <p>Genres</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <ul class="genre-horizontal-list scrollable-list">
+                <li class="genre-card">
+                    <a href="">
+                        <img src="~/Images/genreImages/Historical_Image.png" asp-append-version="true"/>
+                        <p class="title">Historical</p>
+                    </a>
+                </li>
+                
+                <li class="genre-card">
+                    <a href=""> 
+                        <img src="~/Images/genreImages/Business_Image.png" asp-append-version="true"/>
+                        <p class="title">Business</p>
+                    </a>
+                </li>
+
+                <li class="genre-card">
+                    <a href="">
+                        <img src="~/Images/genreImages/Since_Image.png" asp-append-version="true"/>
+                        <p class="title">Since</p>
+                    </a>
+                </li>
+
+                <li class="genre-card">
+                    <a href="">
+                        <img src="~/Images/genreImages/Fairy_Image.jpeg" asp-append-version="true" />
+                        <p class="title">Fairy</p>
+                    </a>
+                </li>
+
+                <li class="genre-card">
+                    <a href="">
+                        <img src="~/Images/genreImages/Programming_Image.jpg" asp-append-version="true" />
+                        <p class="title">Programming</p>
+                    </a>
+                </li>
+
+                <li class="genre-card">
+                    <a href="">
+                        <img src="~/Images/genreImages/Literature_Image.png" asp-append-version="true" />
+                        <p class="title">Literature</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="collection">
+            <a class="title" asp-controller="" asp-action="">
+                <p>Popular Books</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            
+            <ul class="books-horizontal-list scrollable-list" id="popularBooks"></ul>
+        </li>
+
+        <li class="collection">
+            <a class="title" asp-controller="" asp-action="">
+                <p>Authors</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            
+            <ul class="authors-list" id="popularAuthors"></ul>
+        </li>
+
+        <li class="collection">
+            <a class="title" asp-controller="" asp-action="">
+                <p>Saleds</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <ul class="books-horizontal-list scrollable-list" id="saleBooks"></ul>
+        </li>
+    </ul>
+</section>
+
+<script src="~/Scripts/Events/Components/Slider/Slider.js" asp-append-version="true" type="module"></script>
+<script src="~/Scripts/PageScripts/HomePage.js" asp-append-version="true" type="module"></script>

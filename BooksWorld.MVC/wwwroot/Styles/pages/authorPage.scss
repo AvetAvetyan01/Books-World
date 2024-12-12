@@ -1,0 +1,42 @@
+﻿@use "../tools/colors.scss" as *;
+@use "../tools/fonts.scss" as *;
+
+.author-info-section{
+    display: grid;
+    row-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+
+    .collection{
+        width: 100%;
+        display: none;
+    }
+}
+.author-info{
+    display: flex;
+    column-gap: 30px;
+
+    img{
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .name-bio{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .fullname{
+            line-height:normal;
+            color: $darkGray;
+            font-size: 60px;
+            font-weight: 700;
+            height: fit-content;
+        }
+        .autobiographical{
+            line-height: 1;
+            color: $darkGray;
+            font-size: 28px;
+        }
+    }
+}

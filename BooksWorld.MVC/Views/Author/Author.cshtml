@@ -1,0 +1,20 @@
+﻿@{ ViewData["Title"] = Model.FullName; }
+@model Author
+
+<input id="authorId" type="hidden" value="@Model.Id"/>
+<section class="author-info-section">
+    <article class="author-info">
+        <img src="@Model.ImageUrl"/>
+        
+        <div class="name-bio">
+            <p class="fullname">@Model.FullName</p>
+            <p class="autobiographical">@Model.Autobiographical</p>
+        </div>
+    </article>
+
+    <article class="collection" id="authorsBooksContainer">
+        <p class="title">Author's Books</p>
+
+        <ul class="books-horizontal-list" id="authorsBooks"></ul>
+    </article>
+</section>

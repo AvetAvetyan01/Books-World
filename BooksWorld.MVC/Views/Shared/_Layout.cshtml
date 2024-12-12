@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BooksWorld | @ViewData["Title"]</title>
+    <script src="https://kit.fontawesome.com/c04a62fc8b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Styles/MainStyle.css" asp-append-version="true"/>
+    @* <link rel="icon" type="image/x-icon" href="/Images/logo_2.png"> *@
+</head>
+<body>
+    <header>
+        <nav class="header-top-part">
+            <div class="logo">
+                <img src="~/Images/logo.png" alt="logo image" asp-append-version="true"/>
+            </div>
+            
+            <div class="search">
+                <input id="MainSearch" type="text" placeholder="Search by Title, Author or Keyword"/>
+                <button id="searchButton">Search</button>
+            </div>
+                
+            <nav class="header-top-navigation">
+                <div class="languages-dropdown-menu">
+                    <button class="item selected-item" id="languageMenuButton">
+                        <p class="name" id="languageTitle">English</p>
+                        <img class="flag-image" src="~/Images/flagImages/american-england-flag.jpg" />
+                    </button>
+
+                    <ul class="items-list" id="languages">
+                        <li class="item hidden-item">
+                            <p class="name">English</p>
+                            <img class="flag-image" src="~/Images/flagImages/american-england-flag.jpg" />
+                        </li>
+
+                        <li class="item">
+                            <p class="name">Armenian</p>
+                            <img class="flag-image" src="~/Images/flagImages/armenian-flag.png"/>
+                        </li>
+
+                        <li class="item">
+                            <p class="name">Russian</p>
+                            <img class="flag-image" src="~/Images/flagImages/russain-flag.jpg" />
+                        </li>
+                    </ul>
+                </div>
+
+
+                <li class="liked-books">
+                    <a asp-controller="" asp-action="">
+                        <i class="fa-regular fa-heart"></i>
+                        <p class="indicator" id="likedsIndicator"></p>
+                    </a>
+                </li>
+
+                @if (User.Identity!.IsAuthenticated)
+                {
+                    <li class="cart">
+                        <a asp-controller="" asp-action="">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p class="indicator" id="cartIndicator"></p>
+                        </a>
+                    </li>
+
+                    <li class="user">
+                        <button class="button" id="accountMenuButton">
+                            <p class="userName">Pablo</p>
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+
+                         <div id="accountMenuContainer" class="account-menu-container inactive-account-menu">
+                            <div class="account-menu">
+                                <div class="user-info">
+                                    <img id="userImage" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMAAzAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EADUQAAEEAQIEBAUDAwQDAAAAAAEAAgMRBBIhBTFBURMiYXEGFDKBkSNCoVKxwRVi0fEkJXL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A4MJyQJUAE6kAJUCUikqEDSEiekQNpU87MGMNLQHSHoeQ9Vbke2Nhe8gNbztVmcOkyojM7bWdi7t0QYssj5X65iXk9+X2CZ5Lsgj0pap4dp8pfdFDOHsvc2gzopNLQ0M3O/3VuPzRCOvY9/VaMODEDZHJXIsBujkB6oMmYNZG1jK1n6nD/CgkoCiQK/b1PutbJwzGCQQAsyTQLHkaf/ndA/EzHYzQNQczs5a+LlR5MZcw7jmDzWA2Nr36nOt3oFNDM3HnEkbi0j6h3CDoWp4Cazzta8EEEc1IEAhFJQEAAlShLSBKRSchBjhOCaAnAIHAIQEqAQhCBEHklR1CCNmP85lsg/Y0apB3HZauW8RBrQ2q236JeCtDMbKyHDzPeGA9gAq2c/xM50Isl249kGbM8az6lI1wT81rInM7EKuZ2MF80F/FLXO3B2Wi0g7BYcGc0n6W/dasMrXtBB37IDKrRprc8lz2dBofWwJ9V1TomTtbRIe3qsjNx5Yr1NFdDSDGj8MDdgP3pNkY03YoHkp52CzYH4VXUWbcx2KDoeCuLsJjT+wlu60OqxuAS2+aPegA4e6263KBAlpLSUIEATqSgIQJSKSoQYwTmpqc1A5FJQEtICklJUIEpAF79kqjma95DYhqceTe6DXZmY+JwtkbiC54JIHS1iZWWZGxZMX1hha+u1rL4lFkY+Q9mRKPE6hrrr3VvgT45MPNjdZIjZTugdq5e5AP4QU8iWV+zCSxo5lU27vuR5pdPxPFibgl0NNcRvsuU0a3ODyR0QX4XYmqiXfZauJHGCHQTED+nnSx8ZkTGhpaHD1WhjwDVqjZo9kG+xzhVncKaeNk+O5rgDtzKqY5AjDS02rsezCK5oOSyW+HKWbbKpOPLYWvn4mrMHqaWpFwrGxg2WcWxp3ofygxvh1p+YmBv6B/db/UqrAxsHEHsB1tkbqZIBRIHQq4ABy3QKAikqEAlRSEAikqEGIE9oTApG8kChOSAJUAlSIQKkFtNtcQe46JVNhwHJy4YR+94CDB4jwjwIJJJ3Bxc/ygHdW+FY7m4kcdeaQ+K8dr2b/Av7ra4lwyFvFWMl1CIvAN9QqmOQMmVsnk0myT0QW5cbxMfTW/NcpmRMbO7TXNdH81jyZAjdkylvQtbt+VicTjYch7ofp73zQQ47G2CRa3cRrNIKwcRzS/w3EBx5LVqSGLxBZa0WQg1w5teUBIZnDmqMWZE5jTfNGRmMELu/I1/hBTknfNxFsTdjqHVbObJmMgEmOWjResOaCHD7rnmXBlRS3Z1CvZdPkzyMayOOMPZJu8u5NQY2JmDKyo2OaWyss2BtvzC1gOfTfkqGFhMx8h0nmc5xJ1Hb7LQHqgEtIA3SoBCWktIETqRSEGCFIEwKQIHBCEqBEqKSoEU+FkOxMyHIZzieHKFKgufHsz58mDLwn6Y3lpbX9X/ax3uY3GmkIp7WN87nfu3J/z+FNxLIa/BbG4kGF10PUbJ+JixcQMWBgt+YzJQC8NOzdwLP5CDn3z5b2CnOIcN6CayLK/oeR2AW5HweWCSaPLlZA6KxXPcIk+RhD2iaeR9DQBt7oOdmjlYQ6Vjm79dlscIy3SYE0cx+j6Seqy+IxkyCR5dZ3a0uulJikMwnEbOJ39UCRSkBwHKz5VfgcZC1zzdb0saF1y7mlpsyCNIjtpG3v6oLGQGmUEC63DR0W5gGSbEE5LXdr6LKZG5oD5Oe2/or/CHn5OWMHZrjSC1HZZ5uZ3JTwkYPKE4BABKik6kBSEIQCEJUGC1SBMapGhA5KhCAQhKgEIShBn8RZqeGAWJGkfjf8A5Wj8MwYmDwt2QMlkOW9jhqB8xs/T7UB+FDND4xZtZabCrcPLbex+kaWlBFm5rXTnxJi7zdTufVQPzYmD9Nm/cqjlRtZMepBNm1AXWfRA6eR0j7cnxn/xioKJfXRWdOnHdSCvGQHcldg2cCRqVGI25WmSNZ5tqB6lBryTgxAB4JHTstDgVvjneQNJO1LDxcefPdUbaYDZceVLq8PHZi4zYoxQAs+pQDOSckbzpPpAUhCEAhCVAIQhBhtUjUwKQBAoSoQgEtISoEpKhCCXGFvf08h37LAzGyRZLnNaQCVuxSGN+pu5oiu6yuJvfqeTtvyqqItBiTPJJ1Dr3UTWOcRWwCeaLyeqkY4DmaQPjxySDRS5Lg1mmh9koydPp6JkUUuVMGi/UoIYIZZTpibuevZb2DwVgLX5Di7uOisYuMyCMBjfcq411iuSC3AGMaGxtDWjaqU55KpAdP1K4wWN0EIoSAHkU4KPK8lOHROY4PaC0+4QOQlSIFQhCBUIQgxApAmBPCBUoSJQgVCEIBCEIBUs/DknBMJ36hXUAIOZfw/KvaF43/P3Vtvw3xR+O3IOOREdxRtb7RQ2XV8EDZOExgjdpcP5QeVPxCw1KH32Ipa/DgxraAA9lp/FOMIZnSAHdZmGNNXSDV003bqmAAH1UmoCEnrSrxSayDSC0wFytwkjYlQwiwphsUDZgHCqWbqfC7yHryWnKNrBWfkQmQbdED25xH1x36tKlZlwP/foP+4LKkfRrso9TeaDoGmwCNweRBu0q59krmH9NzgfdW4eJSN2laHjuNig1kqggyoZhTXjV/Sdip0GMAnJAlQCckCVAIQhAIQhABPCQJw26WgcOS6P4dk/9fI0/teVgRwSS7AUui4VCIMd7B9TiC73QZvxDjfM45e6w5uxAXIRkxzFpvZdpkyEPljf+47LkOIRiLJc4d0F0y/oEKPGO/3VZ0v6I9VYxOQQa0Z8qlabFd1U16YyFJFLsEFkOBBHZVZnaGOHdSOla06j1VbLdqaSOSDFzC5jy7oq7cizup802CFmEaSg0GyqRsizo37qwyRBcB3vqrMebOxukyE+6z2yJ2tBphOATU9AiVCEAlSJQLKAQlpPhifNKGMFkoEiYZHaWtv/AAtCHFjiAMh1O9FYjgZhwubQ1Hm5Z2RO8vAb22QXZcmOJp9AtDgE/wA1BkV32XKyiWSSifMup+G4xj4egkaibJQVuKQkl7m9G2PsuV4i5sjzf1EbrvJ4td1vT+nrsuD4/EcfiUsdbAoKTGkvDStHh2zdKh4NjvysoNaPc9k4uGNlSNBLqP5QTZM+h1JgzNLVTnZPkP1BpYO5UjcBum3yF3cNQSniF/upRyZhcO6Z4ULD5WhBc3oEEMj3PGzVCIJHn6Vb8RoT43ttBUbhSJ/yUjd1fbK1qr5mXTDp5oKMnk8upQeN6JGh80iux4flQbCcE0Jw2QKgJ0cb5HVG0uPorHyb2i5TpJ6c0FalLFG5/wBP57KZuMz1RL5RX0j+6Bj2QxC3yaj/ALSo2cT+XGmBjRZ83cqnknc04qi7Xq2O6DpXzS5DGs6v5JMvGcDoaaI2JUXCpHQR+LLu+qaD0U/zLJXnV9SDOdHNEbBs9+ad/qOVC0tbIN+gCtzSNDSGgElZ0rg0eYC0Gtwvi8kUJ+ZvVzu+ao/E2jKbHkQ8yPMsqad7/K016q1jzMdD4Urr9UF34aAxMaWdwt7hpbam/wBM8CMzPAdK7c30TfEbFC22WG8qVHIy5C4kPOk9L5IIMt7jy7qoJHtcSDYUz5tXOvsogzWduSBt6t0lHsVYbEAKtO0Dogrhl7lPa0BPcKUZNIFdXcKtJHr5KY7ojCB+JA1vRXtLeyrs8vJS60Eo50tbh3CHSgS5Vsj6Acyp+A8LBY3LyASK8jD/AHK1MmTyO3Ng9OiCm5kUI0wtDR6dVC8Abu3vop3crKoZc24DTaBs0wFgBZuRkE36J2TOASAd1BDAZXW7kgi0uldsOatwYzIqJpxU0cTWbBLI4N3FIGSyEC7AHKlTMrg/y8rUr/1ORTPCOoWP5QSGax6qnkPPVWngAqrLTiT0QUXPIKmwGumymDoDuopi1gNbkrT+HIxJM555sF0g1c8NZCGhgNBYcpJcbbS2M+UFpF2Sdr6LHferqgi8PfYKeFu1JrAdVUrTBpbyQIW9XBRSUCSFK8mtR29FXkNkoI3klRuTy7pf8JpqkDUoTSK5o1dEEzXJ+pQByTWUH//Z" alt="avatar" asp-append-version="true"/>
+                                    <p id="userFullName">Pablo Alvares</p>
+                                </div>
+
+                                <ul class="menu">
+                                    <li><a asp-controller="" asp-action="">Account</a></li>
+                                    <li><a asp-controller="" asp-action="">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                }
+                else
+                {                    
+                    <li class="login-reg">
+                        <a asp-controller="" asp-action="">
+                            <p>LogIn / Registration</p>
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </a>
+                    </li>
+                }
+            </nav>
+        </nav>
+
+        <section class="header-bottom-part">
+            <ul class="header-bottom-menu" id="headerMainMenu">
+                <li data-nav="0" class="accordion-nav"><a asp-controller="" asp-action="">Books</a></li>
+                <li data-nav="1" class="accordion-nav"><a asp-controller="" asp-action="">eBooks</a></li>
+                <li data-nav="2" class="accordion-nav"><a asp-controller="" asp-action="">Audiobooks</a></li>
+                <li><a asp-controller="" asp-action="">Newests</a></li>
+                <li><a asp-controller="" asp-action="">Popular</a></li>
+                <li><a asp-controller="" asp-action="">Collections</a></li>
+                <li><a asp-controller="" asp-action="">Bestsallers</a></li>
+                <li><a asp-controller="" asp-action="">Authors</a></li>
+            </ul>
+            
+            <article class="header-bottom-navigation hidden-nav" id="bottomHeaderNav">
+                <ul class="menu">
+                    <li><a asp-controller="" asp-action=""><i class="fa-solid fa-user-pen"></i>                 Authors             </a></li>
+                    <li><a asp-controller="" asp-action=""><i class="fa-solid fa-layer-group"></i>              Collections         </a></li>
+                    <li><a asp-controller="" asp-action=""><i class="fa-solid fa-tags fa-flip-horizontal"></i>  Discounteds         </a></li>
+                    <li><a asp-controller="" asp-action=""><i class="fa-regular fa-star"></i>                   Bestsallers         </a></li>
+                    <li><a asp-controller="" asp-action=""><i class="fa-solid fa-ranking-star"></i>             Top 100             </a></li>
+                    <li><a asp-controller="" asp-action=""><i class="fa-solid fa-book-open"></i>                Best of 2024        </a></li>
+                </ul>
+
+                <div class="categories">
+                    <p>Genres</p>
+
+                    <ul class="category-list" id="categoryList"></ul>
+                    <button>View All <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+                <div class="ads">
+                    <div class="ads-slider">
+                        <ul class="ads-images" id="adsImages">
+                            <li class="active-ads-image"><a asp-controller="" asp-action=""><img src="~/Images/headerAdsImages/anabolics.webp" /></a></li>
+                            <li class="ads-image"><a asp-controller="" asp-action=""><img src="~/Images/headerAdsImages/interstellar.webp" /></a></li>
+                            <li class="ads-image"><a asp-controller="" asp-action=""><img src="~/Images/headerAdsImages/bookImage.webp" /></a></li>
+                        </ul>
+                    
+                        <ul class="ads-dots" id="adsDots">
+                            <li data-dot="0"><i class="fa-solid fa-circle"></i></li>
+                            <li data-dot="1"><i class="fa-regular fa-circle"></i></li>
+                            <li data-dot="2"><i class="fa-regular fa-circle"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <a href="">
+        <img src="~/Images/adsImages/Banners/Banner_2.png" class="banner"/>
+    </a>
+    
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-menu">
+                <li><a asp-controller="" asp-action="">About Company</a></li>
+                <li><a asp-controller="" asp-action="">Contacts</a></li>
+                <li><a asp-controller="" asp-action="">Our Locations</a></li>
+                <li><a asp-controller="" asp-action="">Feedback</a></li>
+                <li><a asp-controller="" asp-action="">Privacy</a></li>
+                <li><a asp-controller="" asp-action="">Careers</a></li>
+                <li><a asp-controller="" asp-action="">Blogs</a></li>
+                <li><a asp-controller="" asp-action="">Gift Cards</a></li>
+                <li><a asp-controller="" asp-action="">Partnership</a></li>
+                <li><a asp-controller="" asp-action="">FAQs</a></li>
+            </ul>
+
+            <div class="notification-access">
+                <p>Stay in the know</p>
+
+                <div>
+                    <input type="email" placeholder="Email Address"/>
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <p>Submit your email address to receive BooksWorld offers & updates.</p>
+            </div>
+
+            <div class="sm-menu">
+                <p>We in social media</p>
+                <ul class="sm-icons">
+                    <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-square-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/Events/Components/Header/AccountMenu.js" asp-append-version="true" type="module"></script>
+    <script src="~/Scripts/Events/Components/Header/AdsSlider.js" asp-append-version="true" type="module"></script>
+    <script src="~/Scripts/Events/Components/Header/BottomNavigation.js" asp-append-version="true" type="module"></script>
+    <script src="~/Scripts/Events/Components/Header/LanguageMenu.js" asp-append-version="true" type="module"></script>
+    <script src="~/Scripts/Constructors/HeaderGenre.js" asp-append-version="true" type="module"></script>
+    <script src="~/Scripts/DataProvider.js" asp-append-version="true" type="module"></script>
+    <script src="~/Scripts/MainScript.js" asp-append-version="true" type="module"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

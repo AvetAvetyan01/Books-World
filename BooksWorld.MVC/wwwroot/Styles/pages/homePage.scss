@@ -1,0 +1,15 @@
+﻿@use "../tools/colors.scss";
+@use "../tools/fonts.scss";
+@use "../components/cards/bookCard.scss";
+@use "../components/cards/genreCard.scss";
+@use "../components/cards/authorCard.scss";
+@use "../components/collection.scss";
+@use "../components/slider.scss";
+
+.presentation-section {
+    display: grid;
+}
+
+.content-section {
+    
+}

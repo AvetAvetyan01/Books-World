@@ -1,0 +1,17 @@
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/bin/Debug/net8.0/BooksWorld.Persistence.deps.json
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/bin/Debug/net8.0/BooksWorld.Persistence.dll
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/bin/Debug/net8.0/BooksWorld.Persistence.pdb
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/bin/Debug/net8.0/BooksWorld.Domain.dll
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/bin/Debug/net8.0/BooksWorld.Domain.pdb
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.csproj.AssemblyReference.cache
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.AssemblyInfoInputs.cache
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.AssemblyInfo.cs
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.csproj.CoreCompileInputs.cache
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.csproj.CopyComplete
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.dll
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/refint/BooksWorld.Persistence.dll
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.pdb
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/ref/BooksWorld.Persistence.dll
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/bin/Debug/net8.0/BooksWorld.Persistence.runtimeconfig.json
+/home/avet/Documents/C#/BooksWorld/BooksWorld.Persistence/obj/Debug/net8.0/BooksWorld.Persistence.genruntimeconfig.cache

@@ -1,0 +1,15 @@
+﻿@use "../tools/colors.scss" as *;
+@use "../tools/fonts.scss" as *;
+
+.banner {
+    width: 95%;
+    margin: 20px auto;
+    height: 220px;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: 0 5px 20px $lightGray;
+}
+.in-content {
+    width: 100%;
+    margin: 0;
+}

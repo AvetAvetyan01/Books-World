@@ -1,0 +1,15 @@
+﻿@use "../tools/colors.scss" as *;
+@use "../tools/fonts.scss" as *;
+
+@mixin sectionTitle 
+{
+    font-size: 26px;
+    font-weight: 700;
+    font-family: $standartFont;
+    color: $black;
+    cursor: default;
+}
+
+
+
+

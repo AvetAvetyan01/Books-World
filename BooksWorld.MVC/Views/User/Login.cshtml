@@ -1,0 +1,33 @@
+﻿@{ ViewData["Title"] = "Home Page"; }
+
+<form class="log-reg-form" asp-controller="Account" asp-action="LogIn" method="post">
+@*     <ul class="reg-log-fields">
+        <li class="reg-log-field">
+            <label asp-for="Email"></label>
+            <input asp-for="Email"/>
+            <span asp-validation-for="Email"></span>
+        </li>
+
+        <li class="reg-log-field">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </li>
+    </ul>
+ *@
+    <h1 class="form-title">Log in</h1>
+
+    <ul class="fields">
+        <li class="field">
+            <p class="title">Email</p>
+            <input type="text"/>
+        </li>
+
+        <li class="field">
+            <p class="title">Password</p>
+            <input type="text" />
+        </li>
+    </ul>
+
+    <button class="submit-button" type="submit">Submit</button>
+</form>

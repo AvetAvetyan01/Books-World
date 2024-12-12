@@ -1,0 +1,20 @@
+# GET https://{{hostname}}:{{httpsPort}}/Book/books/
+GET https://localhost:7053/Book/books-collection?Page=1&ByDescending=true
+Content-Type: application/json  
+
+{
+    "page" : 5,
+    "authorId" : 2,
+    "genreId" : 3,
+    "maxYear" : 2015,
+    "minYear" : 2022,
+    "maxPagesCount" : 100,
+    "minPagesCount" : 100,
+    "maxPrice" : 2500,
+    "minPrice" : 7400,
+    "highRating" : true,
+    "discount" : false,
+    "Languages" : null,
+    "BookFormat" : 2,
+    "SortingType" : "Rating"
+}

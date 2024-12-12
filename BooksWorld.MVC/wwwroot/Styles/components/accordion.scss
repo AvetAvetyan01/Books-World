@@ -1,0 +1,80 @@
+﻿@use "../tools/colors.scss" as *;
+@use "../tools/fonts.scss" as *;
+
+.faq-section {
+    display: grid;
+    margin: 0 auto;
+    width: 70%;
+    row-gap: 35px;
+    
+    .section-title {
+        margin: 0 auto;
+        font-size: 45px;
+        line-height: 100%;
+        font-weight: 700;
+        font-family: $poshFont;
+        color: $white;
+        letter-spacing: 5px;
+        text-shadow: 1px 1px 0 $darkGray,-1px 1px 0 $darkGray,1px -1px 0 $darkGray,-1px -1px 0 $darkGray;
+        filter: drop-shadow(5px 5px 0 $lightBlue) drop-shadow(8px 8px 0 $darkBlue);
+        cursor: default;
+    }
+}
+.accordion {
+    display: grid;
+    row-gap: 20px;
+    transition: 0.5s;
+    pointer-events: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.accordion-item {
+    pointer-events: visible;
+    display: grid;
+    border: 1px solid $black;
+
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background: $bodyColor;
+        cursor: pointer;
+
+        .text {
+            pointer-events: none;
+            font-weight: 700;
+        }
+
+        .icon {
+            pointer-events: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+    }
+
+    .hidden-section {
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        border-top: 2px solid $black;
+        transition: 1s;
+        cursor: default;
+
+        .content {
+            padding: 15px;
+        }
+    }
+}
+.active-item {
+
+    .top-section {
+
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    .hidden-section {
+        max-height: 400px;
+    }
+}
